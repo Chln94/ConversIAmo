@@ -60,7 +60,7 @@ public class Main {
 	public static void main(String[] args) throws IOException {
 
 		//Watson Assistant connection via API
-		IamOptions iamOptions = new IamOptions.Builder().apiKey("BWbY7TAHQH4p_jNwx-TLEKBmPpCpujje7qQu-k-DJ7BP").build();
+		IamOptions iamOptions = new IamOptions.Builder().apiKey("###").build();
 		Assistant service = new Assistant("2019-02-08", iamOptions);
 		service.setEndPoint("https://gateway.watsonplatform.net/assistant/api");
 		ListWorkspacesOptions options = new ListWorkspacesOptions.Builder().build();
@@ -78,11 +78,11 @@ public class Main {
 
 		//Watson Discovery connection via API
 		IamOptions DiscoveryOptions = new IamOptions.Builder()
-				.apiKey("QTB1SHK0vgfpa9EL6UfN9sZlke_3tXr31qp3d6K2sGCy")
+				.apiKey("###")
 				.build();
 		Discovery discovery = new Discovery("2019-02-08", DiscoveryOptions);
 		discovery.setEndPoint("https://gateway.watsonplatform.net/discovery/api");
-		String environmentId = "aae3312f-6177-477d-bf7d-2eabd19a4551";
+		String environmentId = "###";
 		ListCollectionsOptions listOptions = new ListCollectionsOptions.Builder(environmentId).build();
 		ListCollectionsResponse collListResponse = discovery.listCollections(listOptions).execute().getResult();
 		String collectionId= collListResponse.getCollections().get(0).getCollectionId();
@@ -90,7 +90,7 @@ public class Main {
 
 		//Watson NLU connection via API
 		IamOptions iamOptionsNLU = new IamOptions.Builder()
-				.apiKey("HGtAyUOyFqP5BptcId2RV73Mf8z-NeBrn0DYsanupAYz")
+				.apiKey("###")
 				.build();
 
 		NaturalLanguageUnderstanding naturalLanguageUnderstanding = 
